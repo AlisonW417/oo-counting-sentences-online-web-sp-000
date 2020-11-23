@@ -20,8 +20,8 @@ class String
     sentence_array << self.split("?")
     sentence_array << self.split("!")
     sentence_array.reject!(&:empty?)
-    if sentence_array.length > 0 
-      return sentence_array.length 
+    if sentence_array.count > 0 
+      return sentence_array.count 
     else 
       return 0 
     end 
