@@ -19,12 +19,7 @@ class String
     sentence_array << self.split(".")
     sentence_array << self.split("?")
     sentence_array << self.split("!")
-    sentence_array.reject 
-    if sentence_array.count > 0 
-      return sentence_array.count 
-    else 
-      return 0 
-    end 
-      
+    sentence_array.reject {|sentence| sentence == ""}
+    sentence_array.count
   end
 end
