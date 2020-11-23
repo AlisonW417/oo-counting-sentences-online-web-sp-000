@@ -15,11 +15,6 @@ class String
   end
 
   def count_sentences
-    sentence_array = []
-    sentence_array << self.split(".")
-    sentence_array << self.split("?")
-    sentence_array << self.split("!")
-    sentence_array.reject {|sentence| sentence == ""}
-    sentence_array.count
+    self.split(/.?!).reject{|sentence| sentence.empty?}.count
   end
 end
